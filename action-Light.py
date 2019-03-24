@@ -6,7 +6,7 @@ import re
 import ConfigParser
 from hermes_python.hermes import Hermes
 from hermes_python.ontology import *
-import wikipedia as wiki
+import io
 
 CONFIGURATION_ENCODING_FORMAT = "utf-8"
 CONFIG_INI = "config.ini"
@@ -89,6 +89,6 @@ def action_wrapper(hermes, intentMessage, conf):
 
 if __name__ == "__main__":
     with Hermes("localhost:1883") as h:
-        h.subscribe_intent("CrystalMethod:searchWikipedia", subscribe_intent_callback) \
+        h.subscribe_intent("Ricky7714:On-Off_light_room", subscribe_intent_callback) \
          .start()
          
